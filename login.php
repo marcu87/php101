@@ -1,41 +1,12 @@
 <?php
 
-$usuarios = [
-    [
-        'usuario' => 'Paula',
-        'contraseña' => '123'
-    ],
-    [
-        'usuario' => 'Santi',
-        'contraseña' => '321'
-    ],
-    [
-        'usuario' => 'Pepe',
-        'contraseña' => '321'
-    ],
-    [
-        'usuario' => 'Juan',
-        'contraseña' => '321'
-    ]
-];
+require __DIR__ . '/usuarios.php';
 
-$usuario = $_POST['usuario'];
-$contraseña = $_POST['contraseña'];
-$usuarioLogueado = false;
+$usuarios = obtenerUsuariosRegistrados();
 
-foreach ($usuarios as $usuarioRegistrado) {
-    if ($usuario == $usuarioRegistrado['usuario'] && $contraseña == $usuarioRegistrado['contraseña']) {
-        $usuarioLogueado = true;
-        $mensaje = '¡Usuario logueado correctamente!';
-        break;
-    } elseif ($usuario == $usuarioRegistrado['usuario'] && $contraseña != $usuarioRegistrado['contraseña']) {
-        $mensaje = '¡Contraseña incorrecta!';
-        break;
-    } else {
-        $mensaje = 'El usuario no existe';
-        break;
-    }
-}
+$user = $_POST['usuario'];
+$password = $_POST['contraseña'];
+$usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
 ?>
 
 <!DOCTYPE html>
