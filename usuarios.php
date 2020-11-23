@@ -32,3 +32,14 @@ function usuarioLogueadoCorrectamente($usuario, $contraseña) {
         }
     }
 }
+
+function esContraseñaValida($contraseña) {
+
+        if (strlen($contraseña) >= 8) {
+            return true;
+        } else {
+            return false;
+        }
+}
+
+var_dump (esContraseñaValida('123456789'));

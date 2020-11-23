@@ -7,6 +7,7 @@ $usuarios = obtenerUsuariosRegistrados();
 $user = $_POST['usuario'];
 $password = $_POST['contraseña'];
 $usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
+
 ?>
 
 <!DOCTYPE html>
@@ -37,5 +38,8 @@ $usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
 
         </table>
     <?php endif; ?>
+
+    <button onclick="document.location='loginForm.php'">Volver</button>
+
 </body>
 </html>
