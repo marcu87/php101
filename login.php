@@ -32,7 +32,7 @@ $usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
             
             <?php foreach ($usuarios as $usuarioRegistrado): ?>
                 <tr>
-                    <td><?php echo $usuarioRegistrado['user']; ?></td>
+                    <td><?php echo $usuarioRegistrado['username']; ?></td>
                 </tr>
             <?php endforeach; ?>
 

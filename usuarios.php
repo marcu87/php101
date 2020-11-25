@@ -10,9 +10,22 @@ function fetchUsers() {
     return $result->fetchAll();
 }
 
+function createNewUser($username, $password) {
+    global $pdo;
+
+    $result = $pdo->query("INSERT INTO `users` (username, password) VALUES ('$username', '$password')");
+
+    if (!$result) {
+        return false;
+    }
+
+    return $pdo->lastInsertId();
+}
+
 function usuarioLogueadoCorrectamente($usuario, $contraseña) {
     $usuarios = fetchUsers();
 
+    // TODO: fix bug in which the foreach returns false when the first user is not the correct one.
     foreach ($usuarios as $usuarioRegistrado) {
         if ($usuario == $usuarioRegistrado['username'] && $contraseña == $usuarioRegistrado['password']) {
             return true;
@@ -22,13 +35,6 @@ function usuarioLogueadoCorrectamente($usuario, $contraseña) {
     }
 }
 
-function esContraseñaValida($contraseña) {
-
-        if (strlen($contraseña) >= 8) {
-            return true;
-        } else {
-            return false;
-        }
+function isValidPassword($password) {
+    return strlen($password) >= 8;
 }
-
-var_dump (esContraseñaValida('123456789'));
