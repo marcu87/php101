@@ -2,10 +2,10 @@
 
 require __DIR__ . '/usuarios.php';
 
-$usuarios = obtenerUsuariosRegistrados();
+$usuarios = fetchUsers();
 
-$user = $_POST['usuario'];
-$password = $_POST['contraseña'];
+$user = $_POST['user'];
+$password = $_POST['password'];
 $usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
 ?>
 
@@ -31,7 +31,7 @@ $usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
             
             <?php foreach ($usuarios as $usuarioRegistrado): ?>
                 <tr>
-                    <td><?php echo $usuarioRegistrado['usuario']; ?></td>
+                    <td><?php echo $usuarioRegistrado['user']; ?></td>
                 </tr>
             <?php endforeach; ?>
 
