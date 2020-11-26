@@ -6,9 +6,9 @@
     <title>Register form</title>
 </head>
 <body>
-    <a href="indexRegistrarse.php"><button> Nuevo registro </button>
+    <a href="formularioRegistro.php"><button> Nuevo registro </button>
     <br>
-    <a href="indexAcceder.php"><button> Acceder </button>
+    <a href="formularioAcceder.php"><button> Acceder </button>
     <br>
 </body>
 </html>
