@@ -27,6 +27,7 @@ function usuarioLogueadoCorrectamente($usuario, $contraseña) {
 
     // TODO: fix bug in which the foreach returns false when the first user is not the correct one.
     foreach ($usuarios as $usuarioRegistrado) {
+        
         if ($usuario == $usuarioRegistrado['username'] && $contraseña == $usuarioRegistrado['password']) {
             return true;
         } else {
