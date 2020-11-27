@@ -10,10 +10,10 @@ function fetchUsers() {
     return $result->fetchAll();
 }
 
-function createNewUser($username, $password) {
+function createNewUser($username, $password, $email) {
     global $pdo;
 
-    $result = $pdo->query("INSERT INTO `users` (username, password) VALUES ('$username', '$password')");
+    $result = $pdo->query("INSERT INTO `users` (username, password, email) VALUES ('$username', '$password', '$email')");
 
     if (!$result) {
         return false;
