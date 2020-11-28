@@ -1,0 +1,60 @@
+= Variables
+:toc: left
+
+== What is a variable?
+
+A variable is a named unit of data that is assigned a value.
+If the value is modified, the name does not change.
+
+
+They are used to store information 
+to be referenced and manipulated in a computer program. 
+They also provide a way of labeling data with a descriptive name, 
+so our programs can be understood more clearly by the reader and ourselves. 
+It is helpful to think of variables as containers that hold information. 
+Their sole purpose is to label and store data in memory. 
+This data can then be used throughout your program.
+
+Variables in PHP are represented by a dollar sign followed by the name of the variable.
+The variable name is case-sensitive.
+
+To assign a value to a variable you need to use the assignment operator `=`.
+Your first inclination might be to think of this as "equal to". Don't.
+It really means that the left operand gets set to the value of the expression on the right (that is, "gets set to").
+
+[source, php]
+----
+<?php
+$var = 'Bob';
+$Var = 'Joe';
+echo "$var, $Var";      // outputs "Bob, Joe"
+----
+
+Variables also can change their value by assigning a new value to them.
+
+[source, php]
+----
+<?php
+
+$a = 'first value';
+
+echo $a; // outputs "first value"
+
+$a = 'second value';
+
+echo $a; //outputs "second value"
+----
+
+Variables have to be defined before they are used, otherwise php will throw a notice.
+
+[source, php]
+----
+<?php
+
+echo $foo; // will throw PHP Notice:  Undefined variable: foo
+----
+
+== References
+
+* https://www.php.net/manual/en/language.variables.basics.php
+* https://www.php.net/manual/en/language.operators.assignment.php
