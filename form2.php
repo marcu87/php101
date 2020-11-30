@@ -4,11 +4,11 @@
 // $_GET => array de datos pasados por GET
 // $_POST => array de datos pasados por POST
 if (count($_GET) > 0) {
-    $nombre = $_GET['nombre'];
-    $apellido = $_GET['apellido'];
+    $name = $_GET['nombre'];
+    $surname = $_GET['apellido'];
 } else {
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
+    $name = $_POST['nombre'];
+    $surname = $_POST['apellido'];
 }
 
-echo $nombre . ' ' . $apellido;
+echo $name . ' ' . $surname;

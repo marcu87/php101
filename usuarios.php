@@ -13,7 +13,7 @@ function fetchUsers() {
 function createNewUser($username, $password, $email) {
     global $pdo;
 
-    $result = $pdo->query("INSERT INTO `users` (username, password, email) VALUES ('$username', '$password', '$email')");
+    $result = $pdo->query("INSERT INTO `users` (name, password, email) VALUES ('$username', '$password', '$email')");
 
     if (!$result) {
         return false;
@@ -22,13 +22,13 @@ function createNewUser($username, $password, $email) {
     return $pdo->lastInsertId();
 }
 
-function usuarioLogueadoCorrectamente($usuario, $contraseña) {
-    $usuarios = fetchUsers();
+function correctlyLoggedUser($username, $password) {
+    $users = fetchUsers();
 
     // TODO: fix bug in which the foreach returns false when the first user is not the correct one.
-    foreach ($usuarios as $usuarioRegistrado) {
+    foreach ($users as $registeredUser) {
         
-        if ($usuario == $usuarioRegistrado['username'] && $contraseña == $usuarioRegistrado['password']) {
+        if ($username == $registeredUser['user'] && $password == $registeredUser['password']) {
             return true;
         } else {
             return false;
@@ -39,3 +39,4 @@ function usuarioLogueadoCorrectamente($usuario, $contraseña) {
 function isValidPassword($password) {
     return strlen($password) >= 8;
 }
+

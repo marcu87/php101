@@ -2,11 +2,11 @@
 
 require __DIR__ . '/usuarios.php';
 
-$usuarios = fetchUsers();
+$users = fetchUsers();
 
-$user = $_POST['user'];
+$username = $_POST['user'];
 $password = $_POST['password'];
-$usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
+$loggedUser = correctlyLoggedUser($username, $password);
 
 ?>
 
@@ -24,15 +24,15 @@ $usuarioLogueado = usuarioLogueadoCorrectamente($user, $password);
     </style>
 </head>
 <body>
-    <?php if ($usuarioLogueado == true): ?>
+    <?php if ($loggedUser == true): ?>
         <table>
             <tr>
                 <th>Nombre</th>
             </tr>
             
-            <?php foreach ($usuarios as $usuarioRegistrado): ?>
+            <?php foreach ($users as $registeredUser): ?>
                 <tr>
-                    <td><?php echo $usuarioRegistrado['username']; ?></td>
+                    <td><?php echo $registeredUser['user']; ?></td>
                 </tr>
             <?php endforeach; ?>
 

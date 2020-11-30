@@ -7,11 +7,11 @@
 </head>
 <body>
     <form action="login.php" method="POST">
-        <label for="usuario">Usuario</label>
-        <input type="text" name="user" id="usuario">
+        <label for="user">Usuario</label>
+        <input type="text" name="user" id="user">
         <br>
-        <label for="contraseña">Contraseña</label>
-        <input type="password" name="password" id="contraseña">
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password">
         <br>
         <button type="submit">Enviar</button>
     </form>
