@@ -8,12 +8,16 @@
 <body>
 
 <?php
-range (0, 100); {
+
+function rangeOfNumbers() {
     foreach (range(0, 100) as $número) {
         echo $número;
-        echo '<br>';
+        echo '</br>';
     }
 }
+
+rangeOfNumbers();
+
 ?>
 
 </body>
