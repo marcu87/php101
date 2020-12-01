@@ -9,14 +9,50 @@
 
 <?php
 
-function rangeOfNumbers() {
-    foreach (range(0, 100) as $número) {
-        echo $número;
+function rangeOfNumbers()
+{
+    foreach (range(0, 100) as $number) {
+        echo $number;
         echo '</br>';
     }
 }
 
-rangeOfNumbers();
+// rangeOfNumbers();
+
+/**
+ * $i++ is the same as $i = $i + 1
+ */
+function rangeOfNumbers2()
+{
+    for ($i = 0; $i <= 100; $i++) {
+        echo $i . '<br />';
+    }
+}
+
+// rangeOfNumbers2();
+
+
+function rangeOfNumbers3()
+{
+    $i = 1;
+    while ($i > 1) {
+        echo $i . '<br/>';
+        $i++;
+    }
+}
+
+// rangeOfNumbers3();
+
+function rangeOfNumbers4()
+{
+    $i = 0;
+    do {
+        echo $i;
+        $i++;
+    } while ($i <= 100);
+}
+
+rangeOfNumbers4();
 
 ?>
 
