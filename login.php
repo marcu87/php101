@@ -6,6 +6,7 @@ $users = fetchUsers();
 
 $username = $_POST['user'];
 $password = $_POST['password'];
+
 $loggedUser = correctlyLoggedUser($username, $password);
 
 ?>

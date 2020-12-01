@@ -25,18 +25,17 @@ function createNewUser($username, $password, $email) {
 function correctlyLoggedUser($username, $password) {
     $users = fetchUsers();
 
-    // TODO: fix bug in which the foreach returns false when the first user is not the correct one.
     foreach ($users as $registeredUser) {
-        
-        if ($username == $registeredUser['username'] && $password == $registeredUser['password']) {
+        if (($username == $registeredUser['username'] || $username == $registeredUser['email']) && $password == $registeredUser['password']) {
             return true;
-        } else {
-            return false;
         }
     }
+
+    return false;
 }
 
 function isValidPassword($password) {
     return strlen($password) >= 8;
 }
+
 ?>
