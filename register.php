@@ -3,8 +3,8 @@
 require __DIR__ . '/usuarios.php';
 
 $username = $_POST['username'];
-$password = $_POST['password'];
 $email = $_POST['email'];
+$password = $_POST['password'];
 
 $newUser = createNewUser($username, $password, $email);
 
