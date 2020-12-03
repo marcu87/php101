@@ -34,7 +34,8 @@ require __DIR__ . '/header.php';
             <?php endif; ?>
             <br>
             <br>
-            <button type="submit" class="submit-button">Enviar</button>
+            <button type="submit" class="btn btn-outline-info">Enviar</button>
+                    
     </form>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/header.php';
+
 require __DIR__ . '/usuarios.php';
 
 $users = fetchUsers();
@@ -18,6 +20,8 @@ $loggedUser = correctlyLoggedUser($username, $password);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .ml-1 {
+            margin-left: ($spacer * .25) !important;
         table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
@@ -25,12 +29,15 @@ $loggedUser = correctlyLoggedUser($username, $password);
     </style>
 </head>
 <body>
+    <div class="container">
     <?php if ($loggedUser == true): ?>
-        <table>
-            <tr>
+        <div class="table-responsive-md">
+        <table class="table">
+        <!-- <table> -->
+            <!-- <tr> -->
+            <tr class="table-info">
                 <th>Nombre</th>
             </tr>
-            
             <?php foreach ($users as $registeredUser): ?>
                 <tr>
                     <td><?php echo $registeredUser['username']; ?></td>
@@ -39,8 +46,7 @@ $loggedUser = correctlyLoggedUser($username, $password);
 
         </table>
     <?php endif; ?>
-
-    <button onclick="document.location='loginForm.php'">Volver</button>
-
+        <br>
+        <button type="button" class="btn btn-outline-info" onclick="document.location='loginForm.php'">Volver</button>
 </body>
 </html>
