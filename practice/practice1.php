@@ -46,5 +46,12 @@ for($i = 0; $i < count($array); $i++) {
     break;
     }
   }
-  
 }
+
+foreach ($array as $subArray) { //$subArray => elemento del $array en cada iteración
+  if ($subArray['show'] == true) {
+    echo $subArray['value'];
+  }
+}
+
+//
