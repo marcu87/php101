@@ -7,29 +7,29 @@
  */
 
 $tests = [
-  [
-    'actual' => 'Elephant in the room',
-    'expected' => 'Elephant room the in'
-  ],
-  [
-    'actual' => 'php is really easy',
-    'expected' => 'really easy php is'
-  ],
-  [
-    'actual' => 'Yoda twists the phrases',
-    'expected' => 'phrases twists Yoda the'
-  ]
+    [
+        'actual' => 'Elephant in the room',
+        'expected' => 'Elephant room the in'
+    ],
+    [
+        'actual' => 'php is really easy',
+        'expected' => 'really easy php is'
+    ],
+    [
+        'actual' => 'Yoda twists the phrases',
+        'expected' => 'phrases twists Yoda the'
+    ]
 ];
 
 echo '<pre>';
 
 foreach ($tests as $i => ['actual' => $actual, 'expected' => $expected]) {
-  $result = reorderPhrase($actual);
-  if ($result === $expected) {
-    echo "case $i: Solved!" . PHP_EOL;
-  } else {
-    echo "case $i: Incomplete - Expected: $expected - Returned: $result" . PHP_EOL;
-  }
+    $result = reorderPhrase($actual);
+    if ($result === $expected) {
+        echo "case $i: Solved!" . PHP_EOL;
+    } else {
+        echo "case $i: Incomplete - Expected: $expected - Returned: $result" . PHP_EOL;
+    }
 }
 
 // write your function here!
