@@ -33,7 +33,7 @@ $array = [
 
 $keys = array_keys($array);
 for($i = 0; $i < count($array); $i++) {
-  if ($array[$i]['show'] == false) {
+  if ($array[$i]['show'] == true) {
     echo $array[$i]['value'] . "<br>";
   }
 }
