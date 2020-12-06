@@ -33,18 +33,12 @@ $array = [
 
 $keys = array_keys($array);
 for($i = 0; $i < count($array); $i++) {
-    echo $keys[$i] . "{<br>";
-    foreach($array[$keys[$i]] as $key => $value) {
-        echo $key . " : " . $value . "<br>";
-    }
-    echo "}<br>";
+  if ($array[$i]['show'] == false) {
+    echo $array[$i]['value'] . "{<br>";
+  }
 }
 
-//for ($i = 0; $i < count($array); $i++) {
-//  echo $array[];
-
 //var_dump($array[0]);
-
 
 
 //Definir índices de un subarray:
