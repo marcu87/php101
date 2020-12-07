@@ -23,6 +23,7 @@ $tests = [
 
 echo '<pre>';
 
+
 foreach ($tests as $i => ['actual' => $actual, 'expected' => $expected]) {
     $result = reorderPhrase($actual);
     if ($result === $expected) {
@@ -33,3 +34,14 @@ foreach ($tests as $i => ['actual' => $actual, 'expected' => $expected]) {
 }
 
 // write your function here!
+
+// FUNCTION'S SINTAXIS:
+function reorderPhrase() {
+for($i = 0; $i < count($tests); $i++) { //Prints 'expected' always that 'actual' is true
+    if ($tests[$i]['actual'] == true) {
+        echo $tests[$i]['expected'] . "<br>";
+    }
+}
+}
+
+?>
