@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Write a function findHighest that accepts an array of numbers and returns the highest number
+ * Write a function findHighest that accepts an array of numbers and returns the highest number.
  */
 
 $tests = [
